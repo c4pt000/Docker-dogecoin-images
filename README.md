@@ -8,8 +8,8 @@ requires --privileged and /sbin/init for crond functionality ports 22555 and 225
  ```
  
 <br>
-"without doing a docker commit the wallet.dat and dogecoin.conf will completely regenerate"
-"suggested to run a docker commit and retag or rename the pull image
+# "without doing a docker commit the wallet.dat and dogecoin.conf will completely regenerate"
+# "suggested to run a docker commit and retag or rename the pull image
 
 # Dogecoind
 
@@ -22,7 +22,8 @@ requires --privileged and /sbin/init for crond functionality ports 22555 and 225
   c4pt/dogecoind-wallet sbin/init
 docker exec -it dogecoind-wallet bash
 ```
-
+# "without doing a docker commit the wallet.dat and dogecoin.conf will completely regenerate"
+# "suggested to run a docker commit and retag or rename the pull image
 
 # DogecoinQT
 ```
