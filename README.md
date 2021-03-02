@@ -26,7 +26,9 @@ docker exec -it dogecoind-wallet bash
 # "suggested to run a docker commit and retag or rename the pull image
 
 
-# dogecoin-electrum
+# dogecoin-electrum 
+* cd opt/electrum-doge/
+* ./electrum-doge
 ```
 docker run -it -d --network=host --privileged -p 22555:22556 -v /sys/fs/cgroup:/sys/fs/cgroup:ro -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /root/.Xauthority:/root/.Xauthority c4pt/electrum-doge 
 
