@@ -1,6 +1,6 @@
 # Docker-dogecoin-images
 for standard dogecoind " at block location "blocks": 3629011," 03-02-2021
-
+```
 requires --privileged and /sbin/init for crond functionality ports 22555 and 22556 are for rpcport and port X11 forwarding for drawing graphical application if needed
  examine generate-random-rpc-password.sh  located in /opt/dogecoin/
  https://raw.githubusercontent.com/c4pt000/Docker-dogecoin-images/main/generate-random-rpcpassword.sh
