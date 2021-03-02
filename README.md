@@ -19,7 +19,7 @@ requires --privileged and /sbin/init for crond functionality ports 22555 and 225
  docker commit  <docker-image-digest;eg;3522de7bdaf57ba31>
  docker tag  <newly-returned-docker-digest> dogecoind-wallet
   docker run -it -d --privileged  -p 22555:22556 -v /sys/fs/cgroup:/sys/fs/cgroup:ro -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix \
-  c4pt/dogecoind-wallet sbin/init
+  dogecoind-wallet sbin/init
 docker exec -it dogecoind-wallet bash
 ```
 # "without doing a docker commit the wallet.dat and dogecoin.conf will completely regenerate"
@@ -27,12 +27,12 @@ docker exec -it dogecoind-wallet bash
 
 # DogecoinQT
 ```
-docker run -it -d --privileged  -p 22555:22556 -v /sys/fs/cgroup:/sys/fs/cgroup:ro -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix dogecoinqt-current sbin/init
+docker run -it -d --privileged  -p 22555:22556 -v /sys/fs/cgroup:/sys/fs/cgroup:ro -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix c4pt/dogecoinqt-current sbin/init
 docker commit  <docker-image-digest;eg;3522de7bdaf57ba31>
 docker stop <docker-image-digest;eg;3522de7bdaf57ba31>
  docker tag  <newly-returned-docker-digest> dogecoinqt-wallet-current
   docker run -it -d --privileged  -p 22555:22556 -v /sys/fs/cgroup:/sys/fs/cgroup:ro -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix \
-  c4pt/dogecoinqt-wallet-current sbin/init
+  dogecoinqt-wallet-current sbin/init
 docker exec -it dogecoinqt-wallet-current bash
 ```
 
