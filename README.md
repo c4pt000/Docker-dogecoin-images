@@ -1,6 +1,7 @@
 
 
 # images wont grow they auto reduce to trim current block count recommended 25GB VPS or local root system ~ 25GB or greater
+fedora 33
 
 * c4pt/dogecoind-current-flat           latest    8c4f8b14483d   2 hours ago         4.23GB
 * c4pt/electrum-doge                    latest    744a6332cd8b   3 weeks ago         1.45GB
