@@ -70,6 +70,16 @@ Rewinding blocks...
 <br>
 <br>
 <br>
+root@localhost:/opt/dogecoin# dogecoin-cli getinfo
+<br>
+error: couldn't connect to server: unknown (code -1)
+<br>
+(make sure server is running and you are connecting to the correct RPC port)
+<br>
+root@localhost:/opt/dogecoin# dogecoind -daemon
+<br>
+Dogecoin server starting
+<br>
 
 
 # Dogecoind
