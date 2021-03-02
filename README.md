@@ -1,4 +1,14 @@
 
+
+# images wont grow they auto reduce to trim current block count recommended 25GB VPS or local root system ~ 25GB or greater
+
+* c4pt/dogecoind-current-flat           latest    8c4f8b14483d   2 hours ago         4.23GB
+* c4pt/electrum-doge                    latest    744a6332cd8b   3 weeks ago         1.45GB
+* c4pt/dogecoinqt-current               latest    c69d3d230109   About an hour ago   5.73GB
+
+* synced around block 3628937 03-02-2021
+
+
 VPS host X11 requirements via SSH -X user@host              xhost requirements
 ```
 yum install -y xorg-x11-server-Xorg xorg-x11-xauth xorg-x11-apps
