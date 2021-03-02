@@ -1,4 +1,4 @@
-
+** WIP semi-functional
 
 # images wont grow they auto reduce to trim current block count recommended 25GB VPS or local root system ~ 25GB or greater
 fedora 33
