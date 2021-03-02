@@ -40,8 +40,8 @@ requires --privileged and /sbin/init for crond functionality ports 22555 and 225
 # "suggested to run a docker commit and retag or rename the pull image
 
 # Dogecoind
-cd /opt/dogecoin
-./generate-random-rpc-password.sh
+* cd /opt/dogecoin
+* ./generate-random-rpc-password.sh
 
 ```
  docker run -it -d --privileged  --network=host -p 22555:22556 -v /sys/fs/cgroup:/sys/fs/cgroup:ro -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix \
