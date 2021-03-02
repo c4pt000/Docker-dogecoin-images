@@ -9,13 +9,20 @@
 * synced around block 3628937 03-02-2021
 
 
-VPS host X11 requirements via SSH -X user@host              xhost requirements
+
+
+VPS host X11 requirements via SSH -X user@host              xhost requirements needed on both client side and remote side
+xhost and X11 forwarding with your own caution considering the dangers of MIT-COOKIE_MAGIC hijacking and remote dangers
 ```
 yum install -y xorg-x11-server-Xorg xorg-x11-xauth xorg-x11-apps
 
 ```
 
-
+sshd_config X11 forwarding
+```
+X11Forwarding yes
+X11DisplayOffset 10
+```
 
 
 # Docker-dogecoin-images
