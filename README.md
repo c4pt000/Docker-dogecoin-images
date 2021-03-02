@@ -25,6 +25,20 @@ docker exec -it dogecoind-wallet bash
 # "without doing a docker commit the wallet.dat and dogecoin.conf will completely regenerate"
 # "suggested to run a docker commit and retag or rename the pull image
 
+
+# dogecoin-electrum
+```
+docker run -it -d --privileged  -p 22555:22556 -v /sys/fs/cgroup:/sys/fs/cgroup:ro -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix c4pt/electrum-doge
+sbin/init
+docker commit  <docker-image-digest;eg;3522de7bdaf57ba31>
+docker stop <docker-image-digest;eg;3522de7bdaf57ba31>
+ docker tag  <newly-returned-docker-digest> dogecoin-wallet-electrum
+  docker run -it -d --privileged  -p 22555:22556 -v /sys/fs/cgroup:/sys/fs/cgroup:ro -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix \
+  dogecoin-wallet-electrum sbin/init
+docker exec -it dogecoin-wallet-electrum bash
+```
+
+
 # DogecoinQT
 ```
 docker run -it -d --privileged  -p 22555:22556 -v /sys/fs/cgroup:/sys/fs/cgroup:ro -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix c4pt/dogecoinqt-current sbin/init
