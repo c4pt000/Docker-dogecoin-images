@@ -41,19 +41,25 @@ requires --privileged and /sbin/init for crond functionality ports 22555 and 225
 
 
 
-
+<br>
 * about a 20 minute delay to sync as of 03-02-2021
 <br>
 root@localhost:/opt/dogecoin# dogecoin-cli getinfo
+<br>
 error code: -28
+<br>
 error message:
+<br>
 Loading block index...
 <br>
 root@localhost:/opt/dogecoin# dogecoin-cli getinfo
+<br>
 error code: -28
+<br>
 error message:
+<br>
 Rewinding blocks...
-
+<br>
 
 # Dogecoind
 * cd /opt/dogecoin
