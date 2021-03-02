@@ -1,3 +1,13 @@
+
+VPS host X11 requirements via SSH -x user@host              xhost requirements
+```
+yum install -y xorg-x11-server-Xorg xorg-x11-xauth xorg-x11-apps
+
+```
+
+
+
+
 # Docker-dogecoin-images
 for standard dogecoind " at block location "blocks": 3629011," 03-02-2021
 ```
