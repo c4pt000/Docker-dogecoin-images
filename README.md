@@ -36,11 +36,17 @@ requires --privileged and /sbin/init for crond functionality ports 22555 and 225
  ```
  
 <br>
+
+
+
 # "without doing a docker commit the wallet.dat and dogecoin.conf will completely regenerate"
+
 # "suggested to run a docker commit and retag or rename the pull image
 
 
-
+<br>
+<br>
+<br>
 <br>
 * about a 20 minute delay to sync as of 03-02-2021
 <br>
@@ -60,6 +66,11 @@ error message:
 <br>
 Rewinding blocks...
 <br>
+<br>
+<br>
+<br>
+<br>
+
 
 # Dogecoind
 * cd /opt/dogecoin
