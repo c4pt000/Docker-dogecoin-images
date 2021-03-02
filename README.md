@@ -42,7 +42,7 @@ requires --privileged and /sbin/init for crond functionality ports 22555 and 225
 # Dogecoind
 
 ```
- docker run -it -d --privileged  -p 22555:22556 -v /sys/fs/cgroup:/sys/fs/cgroup:ro -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix \
+ docker run -it -d --privileged  --network=host -p 22555:22556 -v /sys/fs/cgroup:/sys/fs/cgroup:ro -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix \
  c4pt/dogecoind-current-flat /sbin/init
  docker commit  <docker-image-digest;eg;3522de7bdaf57ba31>
  docker tag  <newly-returned-docker-digest> dogecoind-wallet
