@@ -50,7 +50,9 @@ docker exec -it dogecoin-wallet-electrum bash
 ```
 
 
-# DogecoinQT
+# DogecoinQT 
+* cd /opt/dogecoin
+* ./generate-random-rpc-password.sh 
 ```
 docker run -it -d --network=host --privileged -p 22555:22556 -v /sys/fs/cgroup:/sys/fs/cgroup:ro -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v /root/.Xauthority:/root/.Xauthority c4pt/dogecoinqt-current 
 docker commit  <docker-image-digest;eg;3522de7bdaf57ba31>
