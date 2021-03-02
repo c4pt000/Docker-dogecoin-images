@@ -7,12 +7,46 @@ requires --privileged and /sbin/init for crond functionality ports 22555 and 225
  
  ```
  
-```
+<br>
 "without doing a docker commit the wallet.dat and dogecoin.conf will completely regenerate"
 "suggested to run a docker commit and retag or rename the pull image
- docker run -it -d --privileged  -p 22555:22556 -v /sys/fs/cgroup:/sys/fs/cgroup:ro -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix c4pt/dogecoind-current-flat sbin/init
+```
+ docker run -it -d --privileged  -p 22555:22556 -v /sys/fs/cgroup:/sys/fs/cgroup:ro -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix \
+ c4pt/dogecoind-current-flat sbin/init
  docker commit  <docker-image-digest;eg;3522de7bdaf57ba31>
  docker tag  <newly-returned-docker-digest> dogecoind-wallet
-  docker run -it -d --privileged  -p 22555:22556 -v /sys/fs/cgroup:/sys/fs/cgroup:ro -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix c4pt/dogecoind-wallet sbin/init
+  docker run -it -d --privileged  -p 22555:22556 -v /sys/fs/cgroup:/sys/fs/cgroup:ro -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix \
+  c4pt/dogecoind-wallet sbin/init
 docker exec -it dogecoind-wallet bash
 ```
+
+
+
+# AS AN EXAMPLE
+```
+ docker run -it -d --privileged  -p 22555:22556 -v /sys/fs/cgroup:/sys/fs/cgroup:ro -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix \ 
+ c4pt/dogecoind-current-flat sbin/init
+
+
+c430b3d668b5aefbbf0af006d5b2ae88be886bfb280fd17196d82b9404993cbc
+┌─[root@localhost]─[~]
+└──╼ #docker commit c430b3d668b5aefbbf0af006d5b2ae88be886bfb280fd17196d82b9404993cbc       # to preserve wallet.dat and dogecoin.conf in /root/.dogecoin                                                                                        
+sha256:5804486902246f0702a78b7632574909a28902d9eebf700bd21be5b0b3e31de9                    # newly formed image with changes
+
+┌─[root@localhost]─[~]
+└──╼ #docker stop c430b3d668b5aefbbf0af006d5b2ae88be886bfb280fd17196d82b9404993cbc         # stop running image to avoid port conflict                                                                                        
+┌─[root@localhost]─[~]
+└──╼ #docker tag 5804486902246f0702a78b7632574909a28902d9eebf700bd21be5b0b3e31de9 dogecoind-wallet-current     # rename formed image with changes
+
+┌─[root@localhost]─[~]
+└──╼ #docker run -it -d --privileged  -p 22555:22556 -v /sys/fs/cgroup:/sys/fs/cgroup:ro -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix \
+dogecoind-wallet-current sbin/init
+
+30f60f4d03b7f2a4eaf9e4dafdcb3cfa49f2d3927f3d43f02572c6e0fc916fa9
+
+┌─[root@localhost]─[~]
+└──╼ #docker exec -it 30f60f4d03b7f2a4eaf9e4dafdcb3cfa49f2d3927f3d43f02572c6e0fc916fa9 bash           
+
+```
+
+
