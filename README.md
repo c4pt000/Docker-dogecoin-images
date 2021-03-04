@@ -14,6 +14,9 @@ fedora 33
 
 VPS host X11 requirements via SSH -X user@host              xhost requirements needed on both client side and remote side
 xhost and X11 forwarding with your own caution considering the dangers of MIT-COOKIE_MAGIC hijacking and remote dangers
+
+* update 03-04-2021 Avoid /sbin/init for PID1 with --privileged might cause selinux permission label errors leading up tp running /.autorelabel on the host where docker is running
+
 ```
 yum install -y xorg-x11-server-Xorg xorg-x11-xauth xorg-x11-apps xorg-x11-server-utils
 
