@@ -1,6 +1,6 @@
 # npm -g install random-string
 
-random-string > random.txt
+randomstring > random.txt
 sed -e 's/^/rpcpassword=/' random.txt > new_random.txt
 sed -n 1p new_random.txt > rpcpassword.txt
 rm new_random.txt
