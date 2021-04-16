@@ -13,9 +13,6 @@ dbcache=1000
 daemon=1
 port=22556
 rpcport=22555
-
-
-
 addnode=95.85.29.144
 addnode=162.243.113.110
 addnode=146.185.181.114
