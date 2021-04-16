@@ -95,10 +95,7 @@ docker run -it -d -p 22555:22556 -v /sys/fs/cgroup:/sys/fs/cgroup:ro c4pt/dogeco
 ```
  docker run -it -d  --network=host -p 22555:22556 -v /sys/fs/cgroup:/sys/fs/cgroup:ro c4pt/dogecoind-current-flat bash
  docker commit  <docker-image-digest;eg;3522de7bdaf57ba31>
- docker stop <docker-image-digest;eg;3522de7bdaf57ba31>
- docker tag  <newly-returned-docker-digest> dogecoind-wallet
-  docker run -it -d  --network=host -p 22555:22556 -v /sys/fs/cgroup:/sys/fs/cgroup:ro dogecoind-wallet bash
-docker exec -it dogecoind-wallet bash
+
 ```
 # "without doing a docker commit the wallet.dat and dogecoin.conf will completely regenerate"
 # "suggested to run a docker commit and retag or rename the pull image
