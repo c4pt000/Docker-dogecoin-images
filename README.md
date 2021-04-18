@@ -1,5 +1,67 @@
 ** WIP semi-functional recommended 8gb + 4 cpus
 
+
+# for docker-dogecoind-full 50GB 
+ 
+ * 04-16-2021 sync
+ 
+ docker run -it -d -p 22555:22555 -p 22556:22556 c4pt/dogecoind-current-full
+ 
+ docker exec -it <docker_vm_hash> bash
+ 
+
+dogecoin.conf: /root/.dogecoin/dogecoin.conf -> c4pt/dogecoind-current-FULL
+```
+rpcpassword=yourpasswordhere
+rpcuser=rpcuser
+mempoolexpiry=24
+dbcache=1000
+server=1
+port=22556
+rpcport=22555
+rpcallowip=127.0.0.1
+
+
+addnode=95.85.29.144
+addnode=162.243.113.110
+addnode=146.185.181.114
+addnode=188.165.19.28
+addnode=166.78.155.36
+addnode=doge.netcodepool.org
+addnode=doge.cryptoculture.net
+addnode=dogepool.pw
+addnode=78.46.57.132
+
+
+addnode=core0-gb.dogecoin.gg
+addnode=core1-gb.dogecoin.gg
+addnode=dnf-1.gbf.re
+addnode=dnf-1.gbf.re
+addnode=dnf-2.gbf.re
+addnode=dnf-2.gbf.re
+addnode=dnf-3.gbf.re
+addnode=dnf-3.gbf.re
+addnode=dnf-4.gbf.re
+addnode=dnf-4.gbf.re
+addnode=dnf-alpha.gbf.re
+addnode=dnf-beta.gbf.re
+addnode=dnf-test.gbf.re
+addnode=doge1-eu.langerhans.de
+addnode=doge1-eu.langerhans.de
+addnode=doge2-eu.langerhans.de
+addnode=doge2-eu.langerhans.de
+addnode=doge3-eu.langerhans.de
+addnode=doge3-eu.langerhans.de
+addnode=doge4-eu.langerhans.de
+addnode=doge4-eu.langerhans.de
+addnode=dogenode.11z.me:22556
+addnode=eu1.5trubel.de
+addnode=eu2.5trubel.de
+addnode=superfastdoge.ddns.net
+addnode=us-1.wowsuchfast.com
+addnode=us-2.wowsuchfast.com
+```
+
 # images wont grow they auto reduce to trim current block count recommended 25GB VPS or local root system ~ 25GB or greater
 fedora 33
 
